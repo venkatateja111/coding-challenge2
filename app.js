@@ -14,8 +14,8 @@ var fs = require('fs');
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('client/src', path.join(__dirname, 'client/src'));
+//app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -26,9 +26,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: false }));
 
 
-app.use('/', indexRouter);
+//app.use('/', indexRouter);
 app.use('/users', usersRouter);
 //app.use('/name_API/:name1',name_Router)
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/index.js'));
+});
+
+
 
 app.get('/search_by_name_API/name=:name1', function(req, res) {
 
