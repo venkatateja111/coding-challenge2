@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "build": "cd client && npm run build",
-    "install-client":"cd client && npm install",
+    "install-client": "cd client && npm install",
     "start": "node ./bin/www",
-    "client":"cd client && npm start"
+    "client": "cd client && npm start"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -17,12 +17,19 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
-    "nodemon": "^2.0.7",
     "path": "^0.12.7"
   },
   "main": "app.js",
   "devDependencies": {},
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkatateja111/heroku_mern1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/venkatateja111/heroku_mern1/issues"
+  },
+  "homepage": "https://github.com/venkatateja111/heroku_mern1#readme",
   "description": ""
 }
