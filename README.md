@@ -1,4 +1,4 @@
-This project is made with using Node js and React js.
+This project is made with using Express , React and Node js.
 
 This project is deployed on heroku. The link is   https://heroku-mern1.herokuapp.com/
 
