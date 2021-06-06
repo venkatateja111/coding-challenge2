@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-    "start": "cd client && npm start",
-    "client": "cd client && npm start"
+    "start": "npm run start & (cd client && npm run start)",
+    
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
