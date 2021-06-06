@@ -26,13 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: false }));
 
 
-//app.use('/', indexRouter);
-app.use('/users', usersRouter);
-//app.use('/name_API/:name1',name_Router)
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '/index.js'));
-});
 
 
 
