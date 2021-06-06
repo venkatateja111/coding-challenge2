@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "install-client": "cd client && npm install",
-    "start": "concurrently \"npm run client\"  \"node app.js\"",
+    "start": "concurrently  \"node app.js\"  \"cd client && npm start \"",
     "client": "cd client && npm start"
   },
   "dependencies": {
