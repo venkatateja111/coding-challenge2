@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "install-client": "cd client && npm install",
-    "start": "node app.js",
+    "start": "concurrently \"npm run client\"  \"node app.js\"",
     "client": "cd client && npm start"
   },
   "dependencies": {
@@ -19,7 +19,9 @@
     "path": "^0.12.7"
   },
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  },
   "author": "",
   "license": "ISC",
   "repository": {
