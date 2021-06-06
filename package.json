@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    //use first start for running in local machines
-    //"start": "concurrently \"node app.js\" \"cd client && npm run start\"",
-     //use second start for deploying
+    /*use first start for running in local machines
+    "start": "concurrently \"node app.js\" \"cd client && npm run start\"",
+     use second start for deploying*/
      "start": "node app.js", 
      "heroku-postbuild": "cd client && npm install && npm run build"
     
