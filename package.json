@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "install-client": "cd client && npm install",
-    "start": "node ./bin/www",
+    "start": "node app.js",
     "client": "cd client && npm start"
   },
   "dependencies": {
