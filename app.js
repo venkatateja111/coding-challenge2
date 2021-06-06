@@ -235,4 +235,18 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+// Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
+
+const PORT = process.env.PORT || 9000;
+app.listen(PORT)
+
+
+
 module.exports = app;
