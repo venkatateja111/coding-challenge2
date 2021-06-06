@@ -6,9 +6,13 @@ To run this project on a local machine , first download this repository as a zip
 
 Extract this project in a new folder.
 
-In the outer  package.json file which belongs to server, user should do the following change.
 
-"start": "concurrently \"node app.js\" \"cd client && npm run start\""
+1.  install the concurrently npm module on the server.
+
+
+In the outer  package.json file which belongs to server, user should do the following changes.
+
+2.  "start": "concurrently \"node app.js\" \"cd client && npm run start\""
 
 
 users can search the json data according to their queries.
