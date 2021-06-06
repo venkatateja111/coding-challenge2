@@ -14,7 +14,7 @@ var fs = require('fs');
 
 
 // view engine setup
-app.set('client/src', path.join(__dirname, 'client/src'));
+app.use(express.static(path.join(__dirname, 'client/build')));
 //app.set('view engine', 'jade');
 
 app.use(logger('dev'));
@@ -240,7 +240,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 // Handle React routing, return all requests to React app
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
   });
 }
 
